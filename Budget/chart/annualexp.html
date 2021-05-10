@@ -1,0 +1,46 @@
+<!doctype html><head><script src="jquery.min.js"></script><script src="highcharts.js"></script><title></title>
+<meta name="viewport" content="width=320px; initial-scale=1; maximum-scale=1; user-scalable=1;"></head>
+<body style="margin: -8px 0 0 0; padding: 0;"><div id="container" style="width: 320px; height: CUSTOM_HEIGHTpx;"></div>
+<script>
+Number.prototype.formatMoney = function(c, d, t){var n = this, c = isNaN(c = Math.abs(c)) ? 2 : c, d = d == undefined ? "," : d, t = t == undefined ? "." : t, s = n < 0 ? "-" : "", i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "", j = (j = i.length) > 3 ? j % 3 : 0;return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+};
+var chart;
+$(document).ready(function() {
+	chart = new Highcharts.Chart({
+		chart: {
+			renderTo: 'container',
+			type: 'bar'
+		},
+		title: {
+			text: ''
+		},
+		subtitle: {
+			text: ''
+		},
+		yAxis: {
+			title: {
+				text: '',
+				align: 'high'
+			},
+			labels: {
+				overflow: 'justify'
+			},
+            min: 0.00,
+		},
+		plotOptions: {
+			bar: {
+				dataLabels: {
+					enabled: false
+				},
+                animation: false
+			},
+            series: {
+                stacking: 'normal'
+            },
+		},
+		legend: {
+			enabled: false
+		},
+		credits: {
+			enabled: false
+		},
