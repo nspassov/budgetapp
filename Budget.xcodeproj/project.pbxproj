@@ -115,13 +115,11 @@
 		01AF077616EDC897005F2075 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 01AF074916EDC897005F2075 /* TapkuLibrary.bundle */; };
 		01AF124217D35A19003E0B7B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01AF124117D35A19003E0B7B /* MessageUI.framework */; };
 		01AF124B17D35BD3003E0B7B /* Balance.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AF124A17D35BD3003E0B7B /* Balance.m */; };
-		01B7605317C6A7A1004B7CE9 /* libFlurry_4.2.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B7605217C6A7A1004B7CE9 /* libFlurry_4.2.3.a */; };
 		01C02DA416A2C58300D09556 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C02DA316A2C58300D09556 /* AboutViewController.m */; };
 		01C02DB216A2D48300D09556 /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C02DAF16A2D48300D09556 /* IAPHelper.m */; };
 		01C02DB316A2D48300D09556 /* RageIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C02DB116A2D48300D09556 /* RageIAPHelper.m */; };
 		01C48A0D163A6E0600D4F5A8 /* BudgetSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C48A0C163A6E0600D4F5A8 /* BudgetSettings.m */; };
 		01C94D6218314F850066C4EC /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = 01C94D6018314F850066C4EC /* dsym_upload.sh */; };
-		01C94D6318314F850066C4EC /* libCrittercism_v4_1_2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C94D6118314F850066C4EC /* libCrittercism_v4_1_2.a */; };
 		01CC3B3817D2816800018AB5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CC3B3717D2816800018AB5 /* Security.framework */; };
 		01D29C36190C3A0D00A35E8E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D29C35190C3A0D00A35E8E /* Images.xcassets */; };
 		01E3AFB3167E56F800189BD9 /* 17-bar-chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E3AFB1167E56F800189BD9 /* 17-bar-chart.png */; };
@@ -491,8 +489,6 @@
 				77CB1DE415DBBD8600644389 /* UIKit.framework in Frameworks */,
 				77CB1DE615DBBD8600644389 /* Foundation.framework in Frameworks */,
 				KIYDQKWBMRKIEYEVRWSLKUDQ /* libz.dylib in Frameworks */,
-				01B7605317C6A7A1004B7CE9 /* libFlurry_4.2.3.a in Frameworks */,
-				01C94D6318314F850066C4EC /* libCrittercism_v4_1_2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,6 +988,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				fr,
 				ca,
@@ -1311,7 +1308,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"/Applications/Spark Inspector.app/Contents/Resources/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1331,11 +1328,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-framework",
-					SparkInspector,
-				);
+				OTHER_LDFLAGS = "";
 				PROVISIONING_PROFILE = "AD2CBBC1-D406-487C-B654-C585A4E7FCD3";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AD2CBBC1-D406-487C-B654-C585A4E7FCD3";
 				SDKROOT = iphoneos;
@@ -1389,7 +1382,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3R6F27739H;
-				FRAMEWORK_SEARCH_PATHS = "\"/Applications/Spark Inspector.app/Contents/Resources/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Budget/Budget-Prefix.pch";
 				INFOPLIST_FILE = "Budget/Budget-Info.plist";
@@ -1398,11 +1391,7 @@
 					"\"$(SRCROOT)/CrittercismSDK\"",
 					"\"$(SRCROOT)/Flurry\"",
 				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-framework",
-					SparkInspector,
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.colbis.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "846dc6c7-b71b-4922-9bdf-c73fcb8cb471";
